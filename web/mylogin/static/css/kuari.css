@@ -1,0 +1,27 @@
+.area {
+    padding-top: 11%;
+}
+
+.main-title {
+    padding-bottom: 3%;
+    text-align: center;
+}
+
+.main {
+    width: 40%;
+}
+
+a {
+    color: #000000;
+}
+
+body {
+    background-image: url('/static/img/bg.jpg');
+    background-repeat:no-repeat; 
+    background-attachment:fixed
+}
+
+.forget-ps {
+    padding-top: 3%;
+    text-align: right;
+}
