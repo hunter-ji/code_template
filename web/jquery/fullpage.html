@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <!-- <link rel="stylesheet" type="text/css" href="./node_modules/fullpage.js/dist/jquery.fullPage.css" /> -->
+    <link href="https://cdn.bootcss.com/fullPage.js/2.9.6/jquery.fullpage.css" rel="stylesheet">
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="./node_modules/fullpage.js/dist/jquery.fullPage.js"></script> -->
+    <script src="https://cdn.bootcss.com/fullPage.js/2.9.6/jquery.fullpage.js"></script>
+</head>
+
+<body>
+<div id="dowebok">
+    <div class="section">
+        第一屏
+        <p style="text-align: center;"><a id="td" href="javascript:;" onMouseMove=test();>测试测试</a></p>
+    
+    </div>
+    <div class="section">第二屏</div>
+    <div class="section">
+        <div class="slide">第三屏的第一屏</div>
+        <div class="slide">第三屏的第二屏</div>
+        <div class="slide">第三屏的第三屏</div>
+        <div class="slide">第三屏的第四屏</div>
+    </div>
+    <div class="section">第四屏</div>
+</div>
+
+<script>
+$(function(){
+    $('#dowebok').fullpage({
+        sectionsColor: ['#4BBF32', '#4BBFC3', '#7BAABE', 'whitesmoke', '#000'],
+	anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
+
+	afterLoad: function(anchorLink, index){
+		var loadedSection = $(this);
+
+		//使用 index
+		if(index == 3){
+			alert("第3节停止加载");
+		}
+
+		//使用 anchorLink
+		if(anchorLink == 'secondSlide'){
+			alert("第2节停止加载");
+		}
+	}
+    });
+});
+</script>
+<script>
+$(document).ready(function() { 
+ $('#td').hover(function() {
+     alert("heihei");
+ }, function() {
+     alert("okok");
+ });
+});
+</script>
+</body>
